@@ -3,11 +3,11 @@ package com.application.budgeter;
 import java.io.IOException;
 import javafx.fxml.FXML;
 
-public class BudgetController {
+public class DashboardController {
 
     @FXML
-    private void switchToDashboard() throws IOException {
-        App.setRoot("DashboardPage");
+    private void switchToBudget() throws IOException {
+        App.setRoot("BudgetPage");
     }
 
     @FXML
