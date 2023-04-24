@@ -15,6 +15,8 @@ import java.io.IOException;
     // resizing
         // anchor constraints
     // change pages
+        // use onAction in buttons on pages
+        // make sure to use fx:controller in each fxml file
     // make use of controllers
     // push to team
     // read and add fx:id to fxml elements
@@ -24,13 +26,6 @@ import java.io.IOException;
 public class App extends Application {
 
     private static Scene scene;
-
-    @FXML
-    private Button dashboardNavButton;
-    @FXML
-    private Button budgetNavButton;
-    @FXML
-    private Button expenseNavButton;
 
 
     @Override
@@ -44,30 +39,6 @@ public class App extends Application {
     
         stage.setScene(scene);
         stage.show();
-    }
-
-    @FXML
-    private void handleButtonAction(ActionEvent event) {
-        Button clickedButton = (Button) event.getSource();
-        if (clickedButton == expenseNavButton) {
-            // try to set root to ExpensePage
-            try {
-                setRoot("ExpensePage");
-            } catch (IOException e) {
-            }
-            
-        } else if (clickedButton == budgetNavButton) {
-            try {
-                setRoot("BudgetPage");
-            } catch (IOException e) {
-            }
-
-        } else if (clickedButton == dashboardNavButton) {
-            try {
-                setRoot("DashboardPage");
-            } catch (IOException e) {
-            }
-        }
     }
     
 
