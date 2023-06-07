@@ -104,7 +104,7 @@ public class DashboardController implements Initializable {
         }
 
         // if no data or 1 category with data = 0
-        if (pieChartData.isEmpty() || pieChartData.size() == 1 && pieChartData.get(0).getPieValue() == 0) {
+        if (pieChartData.isEmpty() || expenseList.isEmpty()) {
             pieChartData.clear();
             pieChartData.add(new PieChart.Data("No Data", 1));
         }
